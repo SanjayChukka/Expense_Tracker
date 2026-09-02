@@ -30,13 +30,12 @@
                 <span id="Name">Name</span>
             </h2>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="Name Please" required>
-                <label for="floatingInput" id="name">Name Here</label>
+                <input type="text" class="form-control" id="name" placeholder="Name Please" required>
+                <label for="name">Name Here</label>
             </div>
 
             <a href="./Tracker.html">
-                <button class="btn btn-sm" id="login-button" onclick="
-                  check()">
+                <button class="btn btn-sm" id="login-button" onclick="return check()">
                     Login
                 </button>
             </a>
@@ -52,8 +51,9 @@
         let name = document.getElementById('name').value
         if(name===""){
           alert("Please Login to track your Income and Expense");
-          return;
+          return false;
         }
+        return true;
       }
     </script>
 
